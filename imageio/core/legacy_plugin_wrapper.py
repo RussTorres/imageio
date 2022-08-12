@@ -193,7 +193,7 @@ class LegacyPlugin(PluginV3):
             is_batch = True
 
         if not is_batch:
-            ndimage = np.asarray(ndimage)[None, ...]
+            ndimage = np.asanyarray(ndimage)[None, ...]
         elif isinstance(ndimage, list):
             ndimage = np.stack(ndimage, axis=0)
 
